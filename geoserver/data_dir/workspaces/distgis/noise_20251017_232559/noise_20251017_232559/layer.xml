@@ -1,0 +1,19 @@
+<layer>
+  <name>noise_20251017_232559</name>
+  <id>LayerInfoImpl--7da6dedb:199f47dfd8b:-7ffa</id>
+  <type>RASTER</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-3d804361:199f3d1b58d:-7ffd</id>
+  </defaultStyle>
+  <resource class="coverage">
+    <id>CoverageInfoImpl--7da6dedb:199f47dfd8b:-7ffb</id>
+  </resource>
+  <queryable>true</queryable>
+  <opaque>false</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-10-17 23:26:01.861 UTC</dateCreated>
+  <dateModified>2025-10-17 23:26:02.384 UTC</dateModified>
+</layer>

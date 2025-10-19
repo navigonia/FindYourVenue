@@ -1,0 +1,13 @@
+<coverageStore>
+  <id>CoverageStoreInfoImpl-1d9938af:199f47743a2:-7ffb</id>
+  <name>noise_20251017_232017</name>
+  <type>GeoTIFF</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl-3d804361:199f3d1b58d:-7ff6</id>
+  </workspace>
+  <__default>false</__default>
+  <dateCreated>2025-10-17 23:20:18.767 UTC</dateCreated>
+  <disableOnConnFailure>false</disableOnConnFailure>
+  <url>file:data/distgis/noise_20251017_232017/noise_20251017_232017.geotiff</url>
+</coverageStore>

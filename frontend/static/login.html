@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login - dist-gis</title>
+  <style>
+      /* ————————————————————————————————————————————
+    Login Page CSS (vollständig)
+    ———————————————————————————————————————————— */
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: #12151d;
+      color: #f8f9fa;
+      font-family: 'Inter', Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body.login-page {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #0f1117 0%, #1a1d28 100%);
+    }
+
+    /* Login Container */
+    .login-container {
+      background: #1f2633;
+      padding: 2.5rem 3rem;
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.9);
+      width: 360px;
+      max-width: 95%;
+      text-align: center;
+      font-family: 'Inter', Arial, sans-serif;
+    }
+
+    /* Überschriften */
+    .login-container h2 {
+      font-weight: 800;
+      font-size: 1.8rem;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      color: #e9ecef;
+      letter-spacing: 0.05em;
+    }
+
+    /* Eingabefelder */
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      background: #1f2633;
+      border: 1.5px solid #3e4553;
+      border-radius: 10px;
+      color: #ced4da;
+      font-size: 1rem;
+      padding: 0.75rem 1rem;
+      width: 100%;
+      margin: 0.75rem 0;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    .login-container input[type="text"]:focus,
+    .login-container input[type="password"]:focus {
+      outline: none;
+      border-color: #4caf50;
+      box-shadow: 0 0 12px rgba(76, 175, 80, 0.6);
+    }
+
+    /* Login Button */
+    .login-container button {
+      background: linear-gradient(135deg, #4caf50, #81c784);
+      border: none;
+      padding: 0.85rem 1.6rem;
+      border-radius: 12px;
+      cursor: pointer;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.7px;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(76, 175, 80, 0.5);
+      margin-top: 1.2rem;
+      width: 100%;
+    }
+
+    .login-container button:hover,
+    .login-container button:focus {
+      background: linear-gradient(135deg, #3e8e41, #66bb6a);
+      outline: none;
+      box-shadow: 0 12px 28px rgba(62, 142, 65, 0.8);
+      transform: translateY(-3px);
+    }
+
+    .login-container button:active {
+      transform: translateY(1px);
+      box-shadow: 0 6px 16px rgba(62, 142, 65, 0.6);
+    }
+
+    /* Feedback-Text */
+    .login-feedback {
+      color: #81c784;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-top: 1rem;
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out;
+    }
+
+    .login-feedback.visible {
+      opacity: 1;
+    }
+
+    /* Fokus-Style für Accessibility */
+    :focus-visible {
+      outline: 2.5px solid #4caf50;
+      outline-offset: 3px;
+      box-shadow: 0 0 12px rgba(76, 175, 80, 0.7);
+    }
+
+    /* Responsive Anpassungen */
+    @media (max-width: 500px) {
+      .login-container {
+        width: 90%;
+        padding: 2rem;
+      }
+
+      .login-container h2 {
+        font-size: 1.5rem;
+      }
+
+      .login-container button {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.95rem;
+      }
+    }
+
+    /* Login-Button im Header */
+    .topbar .actions button.login-btn {
+      background: linear-gradient(135deg, #2196f3, #64b5f6);
+      border: none;
+      color: #fff;
+      padding: 0.5rem 1.2rem;
+      margin-left: 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(33, 150, 243, 0.4);
+    }
+
+    .topbar .actions button.login-btn:hover,
+    .topbar .actions button.login-btn:focus {
+      background: linear-gradient(135deg, #1976d2, #42a5f5);
+      box-shadow: 0 6px 18px rgba(25, 118, 210, 0.6);
+      outline: none;
+      transform: translateY(-2px);
+    }
+
+    .topbar .actions button.login-btn:active {
+      transform: translateY(1px);
+      box-shadow: 0 3px 10px rgba(25, 118, 210, 0.5);
+    }
+
+
+  </style>
+</head>
+<body class="login-page">
+  <div class="login-container" role="form" aria-labelledby="login-title">
+    <h2 id="login-title">Anmelden</h2>
+    <input
+      type="text"
+      id="username"
+      name="username"
+      placeholder="Benutzername"
+      aria-label="Benutzername"
+      autocomplete="username"
+      required
+    />
+
+    <input
+      type="password"
+      id="password"
+      name="password"
+      placeholder="Passwort"
+      aria-label="Passwort"
+      autocomplete="current-password"
+      required
+    />
+
+    <button id="loginBtn" aria-describedby="feedbackMsg" aria-label="Anmelden">Anmelden</button>
+    <div id="feedbackMsg" class="login-feedback" role="alert" aria-live="assertive"></div>
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      const isLoggedIn = sessionStorage.getItem('loggedIn') === 'true';
+      if (isLoggedIn) {
+        window.location.href = 'index.html';
+      }
+    });
+
+    document.getElementById('loginBtn').addEventListener('click', async () => {
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const feedback = document.getElementById('feedbackMsg');
+
+      if (!username || !password) {
+        feedback.textContent = 'Bitte Benutzername und Passwort eingeben.';
+        feedback.classList.add('visible');
+        return;
+      }
+
+      try {
+        const res = await fetch('/api/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, password })
+        });
+
+        if (!res.ok) throw new Error('Login fehlgeschlagen');
+
+        const data = await res.json();
+        sessionStorage.setItem('loggedIn', 'true');
+        sessionStorage.setItem('username', data.username);
+        sessionStorage.setItem('user_id', data.user_id);
+
+        feedback.textContent = 'Erfolgreich angemeldet!';
+        feedback.classList.add('visible');
+
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 1000);
+      } catch (err) {
+        feedback.textContent = err.message;
+        feedback.classList.add('visible');
+      }
+    });
+
+    // Optional: ESC schließt die Seite
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        window.location.href = 'index.html';
+      }
+    });
+  </script>
+
+</body>
+</html>

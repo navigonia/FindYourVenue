@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<core:CityModel xmlns:xal="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0" xmlns:bldg="http://www.opengis.net/citygml/building/1.0" xmlns:gml="http://www.opengis.net/gml" xmlns:core="http://www.opengis.net/citygml/1.0" xmlns:gen="http://www.opengis.net/citygml/generics/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0 http://schemas.opengis.net/citygml/xAL/xAL.xsd http://www.opengis.net/citygml/building/1.0 http://repository.gdi-de.org/schemas/adv/citygml/building/1.0/buildingLoD1.xsd http://www.opengis.net/gml http://schemas.opengis.net/gml/3.1.1/base/gml.xsd http://www.opengis.net/citygml/1.0 http://repository.gdi-de.org/schemas/adv/citygml/1.0/cityGMLBaseLoD1.xsd http://www.opengis.net/citygml/generics/1.0 http://repository.gdi-de.org/schemas/adv/citygml/generics/1.0/genericsLoD1.xsd http://www.w3.org/1999/xlink http://www.w3.org/1999/xlink.xsd">
+  <gml:name>LoD1_407_5822_1_BE</gml:name>
+  <gml:boundedBy>
+    <gml:Envelope srsName="urn:adv:crs:ETRS89_UTM33*DE_DHHN2016_NH">
+      <gml:lowerCorner srsDimension="3">407000.0 5822000.0 56.63</gml:lowerCorner>
+      <gml:upperCorner srsDimension="3">408000.0 5823000.0 65.765</gml:upperCorner>
+    </gml:Envelope>
+  </gml:boundedBy>
+  <core:cityObjectMember>
+    <bldg:Building gml:id="DEBE10YYW0003GIr">
+      <core:creationDate>2019-03-04</core:creationDate>
+      <core:externalReference>
+        <core:informationSystem>http://repository.gdi-de.org/schemas/adv/citygml/fdv/art.htm#_9100</core:informationSystem>
+        <core:externalObject>
+          <core:name>DEBE10YYW0003GIr</core:name>
+        </core:externalObject>
+      </core:externalReference>
+      <gen:stringAttribute name="Gemeindeschluessel">
+        <gen:value>11000010</gen:value>
+      </gen:stringAttribute>
+      <gen:stringAttribute name="DatenquelleDachhoehe">
+        <gen:value>1000</gen:value>
+      </gen:stringAttribute>
+      <gen:stringAttribute name="BezugspunktDach">
+        <gen:value>2200</gen:value>
+      </gen:stringAttribute>
+      <gen:stringAttribute name="DatenquelleLage">
+        <gen:value>1000</gen:value>
+      </gen:stringAttribute>
+      <gen:stringAttribute name="DatenquelleBodenhoehe">
+        <gen:value>1400</gen:value>
+      </gen:stringAttribute>
+      <bldg:function>51009_1610</bldg:function>
+      <bldg:measuredHeight uom="urn:adv:uom:m">9.135</bldg:measuredHeight>
+      <bldg:storeysAboveGround>0</bldg:storeysAboveGround>
+      <bldg:lod1Solid>
+        <gml:Solid>
+          <gml:exterior>
+            <gml:CompositeSurface>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407075.882 5822029.913 65.765 407088.464 5822027.984 65.765 407088.821 5822030.672 65.765 407078.955 5822032.204 65.765 407079.001 5822032.493 65.765 407076.345 5822032.918 65.765 407075.882 5822029.913 65.765</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407075.882 5822029.913 56.63 407076.345 5822032.918 56.63 407079.001 5822032.493 56.63 407078.955 5822032.204 56.63 407088.821 5822030.672 56.63 407088.464 5822027.984 56.63 407075.882 5822029.913 56.63</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407076.345 5822032.918 65.765 407076.345 5822032.918 56.63 407075.882 5822029.913 56.63 407075.882 5822029.913 65.765 407076.345 5822032.918 65.765</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407079.001 5822032.493 65.765 407079.001 5822032.493 56.63 407076.345 5822032.918 56.63 407076.345 5822032.918 65.765 407079.001 5822032.493 65.765</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407078.955 5822032.204 65.765 407078.955 5822032.204 56.63 407079.001 5822032.493 56.63 407079.001 5822032.493 65.765 407078.955 5822032.204 65.765</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407088.821 5822030.672 65.765 407088.821 5822030.672 56.63 407078.955 5822032.204 56.63 407078.955 5822032.204 65.765 407088.821 5822030.672 65.765</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407088.464 5822027.984 65.765 407088.464 5822027.984 56.63 407088.821 5822030.672 56.63 407088.821 5822030.672 65.765 407088.464 5822027.984 65.765</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407075.882 5822029.913 65.765 407075.882 5822029.913 56.63 407088.464 5822027.984 56.63 407088.464 5822027.984 65.765 407075.882 5822029.913 65.765</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+            </gml:CompositeSurface>
+          </gml:exterior>
+        </gml:Solid>
+      </bldg:lod1Solid>
+      <bldg:address>
+        <core:Address gml:id="UUID_38f7c624-f955-4999-90b9-ce07de3b2289">
+          <core:xalAddress>
+            <xal:AddressDetails>
+              <xal:Country>
+                <xal:CountryName>Germany</xal:CountryName>
+                <xal:Locality Type="Town">
+                  <xal:LocalityName>Berlin</xal:LocalityName>
+                </xal:Locality>
+              </xal:Country>
+            </xal:AddressDetails>
+          </core:xalAddress>
+        </core:Address>
+      </bldg:address>
+    </bldg:Building>
+  </core:cityObjectMember>
+  <core:cityObjectMember>
+    <bldg:Building gml:id="DEBE10YYW0003HgU">
+      <core:creationDate>2019-03-04</core:creationDate>
+      <core:externalReference>
+        <core:informationSystem>http://repository.gdi-de.org/schemas/adv/citygml/fdv/art.htm#_9100</core:informationSystem>
+        <core:externalObject>
+          <core:name>DEBE10YYW0003HgU</core:name>
+        </core:externalObject>
+      </core:externalReference>
+      <gen:stringAttribute name="Gemeindeschluessel">
+        <gen:value>11000010</gen:value>
+      </gen:stringAttribute>
+      <gen:stringAttribute name="DatenquelleDachhoehe">
+        <gen:value>1000</gen:value>
+      </gen:stringAttribute>
+      <gen:stringAttribute name="BezugspunktDach">
+        <gen:value>2200</gen:value>
+      </gen:stringAttribute>
+      <gen:stringAttribute name="DatenquelleLage">
+        <gen:value>1000</gen:value>
+      </gen:stringAttribute>
+      <gen:stringAttribute name="DatenquelleBodenhoehe">
+        <gen:value>1400</gen:value>
+      </gen:stringAttribute>
+      <bldg:function>51009_1610</bldg:function>
+      <bldg:measuredHeight uom="urn:adv:uom:m">8.86</bldg:measuredHeight>
+      <bldg:storeysAboveGround>0</bldg:storeysAboveGround>
+      <bldg:lod1Solid>
+        <gml:Solid>
+          <gml:exterior>
+            <gml:CompositeSurface>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407094.936 5822084.354 65.75 407116.65 5822081.001 65.75 407116.627 5822080.862 65.75 407118.371 5822080.578 65.75 407112.046 5822039.804 65.75 407112.315 5822039.758 65.75 407111.148 5822032.341 65.75 407117.714 5822031.327 65.75 407125.593 5822082.291 65.75 407095.348 5822086.986 65.75 407094.936 5822084.354 65.75</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407094.936 5822084.354 56.89 407095.348 5822086.986 56.89 407125.593 5822082.291 56.89 407117.714 5822031.327 56.89 407111.148 5822032.341 56.89 407112.315 5822039.758 56.89 407112.046 5822039.804 56.89 407118.371 5822080.578 56.89 407116.627 5822080.862 56.89 407116.65 5822081.001 56.89 407094.936 5822084.354 56.89</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407095.348 5822086.986 65.75 407095.348 5822086.986 56.89 407094.936 5822084.354 56.89 407094.936 5822084.354 65.75 407095.348 5822086.986 65.75</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407125.593 5822082.291 65.75 407125.593 5822082.291 56.89 407095.348 5822086.986 56.89 407095.348 5822086.986 65.75 407125.593 5822082.291 65.75</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407117.714 5822031.327 65.75 407117.714 5822031.327 56.89 407125.593 5822082.291 56.89 407125.593 5822082.291 65.75 407117.714 5822031.327 65.75</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407111.148 5822032.341 65.75 407111.148 5822032.341 56.89 407117.714 5822031.327 56.89 407117.714 5822031.327 65.75 407111.148 5822032.341 65.75</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407112.315 5822039.758 65.75 407112.315 5822039.758 56.89 407111.148 5822032.341 56.89 407111.148 5822032.341 65.75 407112.315 5822039.758 65.75</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407112.046 5822039.804 65.75 407112.046 5822039.804 56.89 407112.315 5822039.758 56.89 407112.315 5822039.758 65.75 407112.046 5822039.804 65.75</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407118.371 5822080.578 65.75 407118.371 5822080.578 56.89 407112.046 5822039.804 56.89 407112.046 5822039.804 65.75 407118.371 5822080.578 65.75</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407116.627 5822080.862 65.75 407116.627 5822080.862 56.89 407118.371 5822080.578 56.89 407118.371 5822080.578 65.75 407116.627 5822080.862 65.75</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407116.65 5822081.001 65.75 407116.65 5822081.001 56.89 407116.627 5822080.862 56.89 407116.627 5822080.862 65.75 407116.65 5822081.001 65.75</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407094.936 5822084.354 65.75 407094.936 5822084.354 56.89 407116.65 5822081.001 56.89 407116.65 5822081.001 65.75 407094.936 5822084.354 65.75</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+            </gml:CompositeSurface>
+          </gml:exterior>
+        </gml:Solid>
+      </bldg:lod1Solid>
+      <bldg:address>
+        <core:Address gml:id="UUID_f4eed3cb-6672-4d7a-95bf-86224e7faecc">
+          <core:xalAddress>
+            <xal:AddressDetails>
+              <xal:Country>
+                <xal:CountryName>Germany</xal:CountryName>
+                <xal:Locality Type="Town">
+                  <xal:LocalityName>Berlin</xal:LocalityName>
+                </xal:Locality>
+              </xal:Country>
+            </xal:AddressDetails>
+          </core:xalAddress>
+        </core:Address>
+      </bldg:address>
+    </bldg:Building>
+  </core:cityObjectMember>
+  <core:cityObjectMember>
+    <bldg:Building gml:id="DEBE10YYW0003HFt">
+      <core:creationDate>2019-03-04</core:creationDate>
+      <core:externalReference>
+        <core:informationSystem>http://repository.gdi-de.org/schemas/adv/citygml/fdv/art.htm#_9100</core:informationSystem>
+        <core:externalObject>
+          <core:name>DEBE10YYW0003HFt</core:name>
+        </core:externalObject>
+      </core:externalReference>
+      <gen:stringAttribute name="Gemeindeschluessel">
+        <gen:value>11000010</gen:value>
+      </gen:stringAttribute>
+      <gen:stringAttribute name="DatenquelleDachhoehe">
+        <gen:value>1000</gen:value>
+      </gen:stringAttribute>
+      <gen:stringAttribute name="BezugspunktDach">
+        <gen:value>2200</gen:value>
+      </gen:stringAttribute>
+      <gen:stringAttribute name="DatenquelleLage">
+        <gen:value>1000</gen:value>
+      </gen:stringAttribute>
+      <gen:stringAttribute name="DatenquelleBodenhoehe">
+        <gen:value>1400</gen:value>
+      </gen:stringAttribute>
+      <bldg:function>51009_1610</bldg:function>
+      <bldg:measuredHeight uom="urn:adv:uom:m">5.155</bldg:measuredHeight>
+      <bldg:storeysAboveGround>0</bldg:storeysAboveGround>
+      <bldg:lod1Solid>
+        <gml:Solid>
+          <gml:exterior>
+            <gml:CompositeSurface>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407075.59 5822057.135 63.06 407075.766 5822054.792 63.06 407076.958 5822054.9 63.06 407078.009 5822055.01 63.06 407077.823 5822057.313 63.06 407077.333 5822057.282 63.06 407075.59 5822057.135 63.06</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407075.59 5822057.135 57.905 407077.333 5822057.282 57.905 407077.823 5822057.313 57.905 407078.009 5822055.01 57.905 407076.958 5822054.9 57.905 407075.766 5822054.792 57.905 407075.59 5822057.135 57.905</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407077.333 5822057.282 63.06 407077.333 5822057.282 57.905 407075.59 5822057.135 57.905 407075.59 5822057.135 63.06 407077.333 5822057.282 63.06</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407077.823 5822057.313 63.06 407077.823 5822057.313 57.905 407077.333 5822057.282 57.905 407077.333 5822057.282 63.06 407077.823 5822057.313 63.06</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407078.009 5822055.01 63.06 407078.009 5822055.01 57.905 407077.823 5822057.313 57.905 407077.823 5822057.313 63.06 407078.009 5822055.01 63.06</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407076.958 5822054.9 63.06 407076.958 5822054.9 57.905 407078.009 5822055.01 57.905 407078.009 5822055.01 63.06 407076.958 5822054.9 63.06</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407075.766 5822054.792 63.06 407075.766 5822054.792 57.905 407076.958 5822054.9 57.905 407076.958 5822054.9 63.06 407075.766 5822054.792 63.06</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon>
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">407075.59 5822057.135 63.06 407075.59 5822057.135 57.905 407075.766 5822054.792 57.905 407075.766 5822054.792 63.06 407075.59 5822057.135 63.06</gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+            </gml:CompositeSurface>
+          </gml:exterior>
+        </gml:Solid>
+      </bldg:lod1Solid>
+      <bldg:address>
+        <core:Address gml:id="UUID_d60130a8-4afa-43b8-96b8-fd740fc699a7">
+          <core:xalAddress>
+            <xal:AddressDetails>
+              <xal:Country>
+                <xal:CountryName>Germany</xal:CountryName>
+                <xal:Locality Type="Town">
+                  <xal:LocalityName>Berlin</xal:LocalityName>
+                </xal:Locality>
+              </xal:Country>
+            </xal:AddressDetails>
+          </core:xalAddress>
+        </core:Address>
+      </bldg:address>
+    </bldg:Building>
+  </core:cityObjectMember>
+  <core:cityObjectMember>
+    <bldg:Building gml:id="DEBE10YYW00007gR">
+      <core:creationDate>2019-03-04</core:creationDate>
+      <core:externalReference>
+        <core:informationSystem>http://repository.gdi-de.org/schemas/adv/citygml/fdv/art.htm#_9100</core:informationSystem>
+        <core:externalObject>
+          <core:name>DEBE10YYW00007gR</core:name>
+        </core:externalObject>
+      </core:externalReference>
+      <gen:stringAttribute name="Gemeindeschluessel">
+        <gen:value>11000010</gen:value>
+      </gen:stringAttribute>
+      <bldg:function>31001_3021</bldg:function>
+      <bldg:consistsOfBuildingPart>
+        <bldg:BuildingPart gml:id="UUID_a4322b1f-cc06-4803-89c1-f3e52bc99b31">
+          <core:creationDate>2019-03-04</core:creationDate>
+          <gen:stringAttribute name="DatenquelleDachhoehe">
+            <gen:value>1000</gen:value>
+          </gen:stringAttribute>
+          <gen:stringAttribute name="BezugspunktDach">
+            <gen:value>2200</gen:value>
+          </gen:stringAttribute>
+          <gen:stringAttribute name="DatenquelleLage">
+            <gen:value>1000</gen:value>
+          </gen:stringAttribute>
+          <gen:stringAttribute name="DatenquelleBodenhoehe">
+            <gen:value>1400</gen:value>
+          </gen:stringAttribute>
+          <bldg:measuredHeight uom="urn:adv:uom:m">8.865</bldg:measuredHeight>
+          <bldg:storeysAboveGround>3</bldg:storeysAboveGround>
+          <bldg:lod1Solid>
+            <gml:Solid>
+              <gml:exterior>
+                <gml:CompositeSurface>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407078.955 5822032.204 65.765 407110.359 5822027.327 65.765 407112.315 5822039.758 65.765 407112.046 5822039.804 65.765 407118.371 5822080.578 65.765 407116.627 5822080.862 65.765 407116.65 5822081.001 65.765 407094.936 5822084.354 65.765 407094.901 5822084.151 65.765 407087.434 5822085.277 65.765 407079.001 5822032.493 65.765 407078.955 5822032.204 65.765</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407078.955 5822032.204 56.9 407079.001 5822032.493 56.9 407087.434 5822085.277 56.9 407094.901 5822084.151 56.9 407094.936 5822084.354 56.9 407116.65 5822081.001 56.9 407116.627 5822080.862 56.9 407118.371 5822080.578 56.9 407112.046 5822039.804 56.9 407112.315 5822039.758 56.9 407110.359 5822027.327 56.9 407078.955 5822032.204 56.9</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407079.001 5822032.493 65.765 407079.001 5822032.493 56.9 407078.955 5822032.204 56.9 407078.955 5822032.204 65.765 407079.001 5822032.493 65.765</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407087.434 5822085.277 65.765 407087.434 5822085.277 65.15 407079.001 5822032.493 65.15 407079.001 5822032.493 65.765 407087.434 5822085.277 65.765</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407094.901 5822084.151 65.765 407094.901 5822084.151 58.53 407094.901 5822084.151 65.15 407087.434 5822085.277 65.15 407087.434 5822085.277 65.765 407094.901 5822084.151 65.765</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407094.936 5822084.354 65.765 407094.936 5822084.354 65.15 407094.901 5822084.151 65.15 407094.901 5822084.151 65.765 407094.936 5822084.354 65.765</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407116.65 5822081.001 65.765 407116.65 5822081.001 56.9 407094.936 5822084.354 56.9 407094.936 5822084.354 65.765 407116.65 5822081.001 65.765</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407116.627 5822080.862 65.765 407116.627 5822080.862 56.9 407116.65 5822081.001 56.9 407116.65 5822081.001 65.765 407116.627 5822080.862 65.765</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407118.371 5822080.578 65.765 407118.371 5822080.578 56.9 407116.627 5822080.862 56.9 407116.627 5822080.862 65.765 407118.371 5822080.578 65.765</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407112.046 5822039.804 65.765 407112.046 5822039.804 56.9 407118.371 5822080.578 56.9 407118.371 5822080.578 65.765 407112.046 5822039.804 65.765</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407112.315 5822039.758 65.765 407112.315 5822039.758 56.9 407112.046 5822039.804 56.9 407112.046 5822039.804 65.765 407112.315 5822039.758 65.765</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407110.359 5822027.327 65.765 407110.359 5822027.327 56.9 407112.315 5822039.758 56.9 407112.315 5822039.758 65.765 407110.359 5822027.327 65.765</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407078.955 5822032.204 65.765 407078.955 5822032.204 56.9 407110.359 5822027.327 56.9 407110.359 5822027.327 65.765 407078.955 5822032.204 65.765</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407087.434 5822085.277 65.15 407087.434 5822085.277 56.9 407079.001 5822032.493 56.9 407079.001 5822032.493 65.15 407087.434 5822085.277 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407094.901 5822084.151 58.53 407094.901 5822084.151 56.9 407087.434 5822085.277 56.9 407087.434 5822085.277 65.15 407094.901 5822084.151 65.15 407094.901 5822084.151 58.53</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407094.936 5822084.354 65.15 407094.936 5822084.354 56.9 407094.901 5822084.151 56.9 407094.901 5822084.151 62.264 407094.901 5822084.151 65.15 407094.936 5822084.354 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                </gml:CompositeSurface>
+              </gml:exterior>
+            </gml:Solid>
+          </bldg:lod1Solid>
+        </bldg:BuildingPart>
+      </bldg:consistsOfBuildingPart>
+      <bldg:consistsOfBuildingPart>
+        <bldg:BuildingPart gml:id="DEBE10YYW00007gR_01">
+          <core:creationDate>2019-03-04</core:creationDate>
+          <gen:stringAttribute name="DatenquelleDachhoehe">
+            <gen:value>1000</gen:value>
+          </gen:stringAttribute>
+          <gen:stringAttribute name="BezugspunktDach">
+            <gen:value>2200</gen:value>
+          </gen:stringAttribute>
+          <gen:stringAttribute name="DatenquelleLage">
+            <gen:value>1000</gen:value>
+          </gen:stringAttribute>
+          <gen:stringAttribute name="DatenquelleBodenhoehe">
+            <gen:value>1400</gen:value>
+          </gen:stringAttribute>
+          <bldg:measuredHeight uom="urn:adv:uom:m">8.342</bldg:measuredHeight>
+          <bldg:storeysAboveGround>3</bldg:storeysAboveGround>
+          <bldg:lod1Solid>
+            <gml:Solid>
+              <gml:exterior>
+                <gml:CompositeSurface>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407070.907 5822039.057 65.15 407073.559 5822038.656 65.15 407073.594 5822038.915 65.15 407074.471 5822038.779 65.15 407073.365 5822031.651 65.15 407073.904 5822031.58 65.15 407074.166 5822033.265 65.15 407079.001 5822032.493 65.15 407087.434 5822085.277 65.15 407094.901 5822084.151 65.15 407094.936 5822084.354 65.15 407095.687 5822089.159 65.15 407095.867 5822089.136 65.15 407095.945 5822089.554 65.15 407082.625 5822091.577 65.15 407077.333 5822057.282 65.15 407077.823 5822057.313 65.15 407078.009 5822055.01 65.15 407076.958 5822054.9 65.15 407074.791 5822040.892 65.15 407073.924 5822041.029 65.15 407073.959 5822041.288 65.15 407071.357 5822041.688 65.15 407070.907 5822039.057 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407070.907 5822039.057 56.808 407071.357 5822041.688 56.808 407073.959 5822041.288 56.808 407073.924 5822041.029 56.808 407074.791 5822040.892 56.808 407076.958 5822054.9 56.808 407078.009 5822055.01 56.808 407077.823 5822057.313 56.808 407077.333 5822057.282 56.808 407082.625 5822091.577 56.808 407095.945 5822089.554 56.808 407095.867 5822089.136 56.808 407095.687 5822089.159 56.808 407094.936 5822084.354 56.808 407094.901 5822084.151 56.808 407087.434 5822085.277 56.808 407079.001 5822032.493 56.808 407074.166 5822033.265 56.808 407073.904 5822031.58 56.808 407073.365 5822031.651 56.808 407074.471 5822038.779 56.808 407073.594 5822038.915 56.808 407073.559 5822038.656 56.808 407070.907 5822039.057 56.808</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407071.357 5822041.688 65.15 407071.357 5822041.688 56.808 407070.907 5822039.057 56.808 407070.907 5822039.057 65.15 407071.357 5822041.688 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407073.959 5822041.288 65.15 407073.959 5822041.288 56.808 407071.357 5822041.688 56.808 407071.357 5822041.688 65.15 407073.959 5822041.288 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407073.924 5822041.029 65.15 407073.924 5822041.029 56.808 407073.959 5822041.288 56.808 407073.959 5822041.288 65.15 407073.924 5822041.029 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407074.791 5822040.892 65.15 407074.791 5822040.892 56.808 407073.924 5822041.029 56.808 407073.924 5822041.029 65.15 407074.791 5822040.892 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407076.958 5822054.9 65.15 407076.958 5822054.9 56.808 407074.791 5822040.892 56.808 407074.791 5822040.892 65.15 407076.958 5822054.9 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407078.009 5822055.01 65.15 407078.009 5822055.01 56.808 407076.958 5822054.9 56.808 407076.958 5822054.9 65.15 407078.009 5822055.01 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407077.823 5822057.313 65.15 407077.823 5822057.313 56.808 407078.009 5822055.01 56.808 407078.009 5822055.01 65.15 407077.823 5822057.313 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407077.333 5822057.282 65.15 407077.333 5822057.282 56.808 407077.823 5822057.313 56.808 407077.823 5822057.313 65.15 407077.333 5822057.282 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407082.625 5822091.577 65.15 407082.625 5822091.577 56.808 407077.333 5822057.282 56.808 407077.333 5822057.282 65.15 407082.625 5822091.577 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407095.945 5822089.554 65.15 407095.945 5822089.554 56.808 407082.625 5822091.577 56.808 407082.625 5822091.577 65.15 407095.945 5822089.554 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407095.867 5822089.136 65.15 407095.867 5822089.136 56.808 407095.945 5822089.554 56.808 407095.945 5822089.554 65.15 407095.867 5822089.136 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407095.687 5822089.159 65.15 407095.687 5822089.159 56.808 407095.867 5822089.136 56.808 407095.867 5822089.136 65.15 407095.687 5822089.159 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407094.901 5822084.151 56.9 407094.901 5822084.151 56.808 407094.936 5822084.354 56.808 407094.936 5822084.354 56.9 407094.901 5822084.151 56.9</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407087.434 5822085.277 56.9 407087.434 5822085.277 56.808 407094.901 5822084.151 56.808 407094.901 5822084.151 65.15 407094.901 5822084.151 56.9 407087.434 5822085.277 56.9</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407074.166 5822033.265 65.15 407074.166 5822033.265 56.808 407079.001 5822032.493 56.808 407079.001 5822032.493 65.15 407074.166 5822033.265 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407073.904 5822031.58 65.15 407073.904 5822031.58 56.808 407074.166 5822033.265 56.808 407074.166 5822033.265 65.15 407073.904 5822031.58 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407073.365 5822031.651 65.15 407073.365 5822031.651 56.808 407073.904 5822031.58 56.808 407073.904 5822031.58 65.15 407073.365 5822031.651 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407074.471 5822038.779 65.15 407074.471 5822038.779 56.808 407073.365 5822031.651 56.808 407073.365 5822031.651 65.15 407074.471 5822038.779 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407073.594 5822038.915 65.15 407073.594 5822038.915 56.808 407074.471 5822038.779 56.808 407074.471 5822038.779 65.15 407073.594 5822038.915 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407073.559 5822038.656 65.15 407073.559 5822038.656 56.808 407073.594 5822038.915 56.808 407073.594 5822038.915 65.15 407073.559 5822038.656 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407070.907 5822039.057 65.15 407070.907 5822039.057 56.808 407073.559 5822038.656 56.808 407073.559 5822038.656 65.15 407070.907 5822039.057 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407094.936 5822084.354 65.15 407094.936 5822084.354 56.808 407095.687 5822089.159 56.808 407095.687 5822089.159 65.15 407094.936 5822084.354 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407094.901 5822084.151 65.15 407094.901 5822084.151 56.9 407094.936 5822084.354 56.9 407094.936 5822084.354 65.15 407094.901 5822084.151 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407087.434 5822085.277 59.855 407087.434 5822085.277 56.9 407094.901 5822084.151 56.9 407094.901 5822084.151 65.15 407087.434 5822085.277 65.15 407087.434 5822085.277 59.855</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                  <gml:surfaceMember>
+                    <gml:Polygon>
+                      <gml:exterior>
+                        <gml:LinearRing>
+                          <gml:posList srsDimension="3">407079.001 5822032.493 65.15 407079.001 5822032.493 56.808 407087.434 5822085.277 56.808 407087.434 5822085.277 65.15 407079.001 5822032.493 65.15</gml:posList>
+                        </gml:LinearRing>
+                      </gml:exterior>
+                    </gml:Polygon>
+                  </gml:surfaceMember>
+                </gml:CompositeSurface>
+              </gml:exterior>
+            </gml:Solid>
+          </bldg:lod1Solid>
+        </bldg:BuildingPart>
+      </bldg:consistsOfBuildingPart>
+      <bldg:address>
+        <core:Address>
+          <core:xalAddress>
+            <xal:AddressDetails>
+              <xal:Country>
+                <xal:CountryName>Germany</xal:CountryName>
+                <xal:Locality Type="Town">
+                  <xal:LocalityName>Berlin</xal:LocalityName>
+                  <xal:Thoroughfare Type="Street">
+                    <xal:ThoroughfareNumber>3</xal:ThoroughfareNumber>
+                    <xal:ThoroughfareName>Eilenburger Straße</xal:ThoroughfareName>
+                  </xal:Thoroughfare>
+                </xal:Locality>
+              </xal:Country>
+            </xal:AddressDetails>
+          </core:xalAddress>
+        </core:Address>
+      </bldg:address>
+    </bldg:Building>
+  </core:cityObjectMember>
+</core:CityModel>

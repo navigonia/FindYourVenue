@@ -1,0 +1,98 @@
+version: "3.9"
+
+services:
+  # --------------------------------------------------
+  # 🌐 Frontend (NGINX)
+  # --------------------------------------------------
+  web:
+    build:
+      context: ./frontend
+      dockerfile: nginx/Dockerfile
+    image: dist-gis-frontend:latest
+    container_name: dist-gis-web
+    ports:
+      - "8080:80"
+    depends_on:
+      - api
+      - geoserver
+    volumes:
+      - ./frontend/static:/usr/share/nginx/html:ro
+    restart: unless-stopped
+
+  # --------------------------------------------------
+  # ⚙️ API (FastAPI Backend)
+  # --------------------------------------------------
+  api:
+    build: ./backend
+    container_name: dist-gis-api
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql+psycopg2://distgis:distgis@db:5432/distgis
+      - GEOSERVER_URL=http://geoserver:8080/geoserver
+      - GEOSERVER_USER=admin
+      - GEOSERVER_PASS=geoserver
+      - GEOSERVER_WS=distgis
+      - GEOSERVER_STYLE=noise_heat
+      - OUTPUT_RASTER_DIR=/data/rasters
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - raster_data:/data/rasters
+      - ./data/LoD1:/data/LoD1 
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  # --------------------------------------------------
+  # 🗄️ PostGIS Datenbank
+  # --------------------------------------------------
+  db:
+    image: postgis/postgis:16-3.4
+    container_name: dist-gis-db
+    environment:
+      POSTGRES_USER: distgis
+      POSTGRES_PASSWORD: distgis
+      POSTGRES_DB: distgis
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./db/init:/docker-entrypoint-initdb.d
+      - ./data/LoD1:/data/LoD1               # <—— hier mountest du dein LoD1-Verzeichnis
+
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U distgis -d distgis"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+  # --------------------------------------------------
+  # 🌍 GeoServer
+  # --------------------------------------------------
+  geoserver:
+    build: ./geoserver
+    container_name: dist-gis-geoserver
+    environment:
+      - GEOSERVER_ADMIN_USER=admin
+      - GEOSERVER_ADMIN_PASSWORD=geoserver
+      - CORS_ENABLED=true
+    ports:
+      - "8081:8080"
+    depends_on:
+      - api
+    restart: unless-stopped
+    volumes:
+      - raster_data:/data/rasters
+
+# --------------------------------------------------
+# 🧱 Volumes
+# --------------------------------------------------
+volumes:
+  db_data:
+  raster_data:

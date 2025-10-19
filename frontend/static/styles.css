@@ -1,0 +1,202 @@
+:root {
+  --bg-dark: #0f1117;
+  --panel: #1a1d25;
+  --accent: #4caf50;
+  --border: #2b2f3a;
+  --muted: #999;
+}
+
+/* Grundlayout */
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-dark);
+  color: #e6e6e6;
+}
+
+/* Überschrift + Intro */
+.page-header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+.page-header h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #fff;
+}
+.page-header .subtitle {
+  color: #aaa;
+  font-size: 1rem;
+  margin-top: 0.4rem;
+}
+
+/* Steuerleiste */
+.processing-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 1.2rem;
+  background: #11131a;
+  border-bottom: 1px solid var(--border);
+}
+.processing-bar .btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.processing-bar .status-area {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.processing-bar .btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.55rem 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn.main     { background: var(--accent); color: #fff; }
+.btn.secondary{ background: #2b2f3a; color: #ddd; }
+.btn.danger   { background: #c0392b; color: #fff; }
+.btn.toggle   { background: #2e4053; color: #fff; }
+.btn.logout   { background: #555; color: #fff; }
+.btn:hover    { filter: brightness(1.2); transform: translateY(-1px); }
+.status       { color: var(--muted); font-size: 0.9rem; }
+
+/* Layout mit Karte */
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  height: calc(100vh - 210px);
+}
+
+/* Linkes Panel */
+.panel {
+  background: var(--panel);
+  border-right: 1px solid var(--border);
+  padding: 1rem;
+  overflow-y: auto;
+}
+.panel h2 { margin-top: 0; font-size: 1.2rem; }
+.panel .legend { margin: 1rem 0; }
+.swatch {
+  display: inline-block;
+  width: 16px; height: 12px;
+  border-radius: 3px;
+  margin-right: 0.4rem;
+}
+.swatch-green { background: #2ecc71; }
+.swatch-orange{ background: #f39c12; }
+.swatch-red   { background: #e74c3c; }
+
+/* Karte mittig */
+.map-area {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.map {
+  height: 100%;
+  width: 100%;
+}
+.leaflet-container { height: 100%; width: 100%; }
+
+/* Legende unten */
+#legendContainer {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15,17,23,0.9);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+  padding: 8px 14px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  text-align: center;
+  display: none;
+}
+#legendContainer::before {
+  content: "Schallpegel (dB)";
+  color: #ddd;
+  font-size: 13px;
+  display: block;
+  margin-bottom: 4px;
+  letter-spacing: 0.4px;
+}
+#legendContainer img {
+  display: block;
+  max-width: 280px;
+  border-radius: 4px;
+}
+
+/* Footer */
+.page-footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.95rem;
+  color: #bbb;
+  border-top: 1px solid var(--border);
+  background: #11131a;
+}
+.page-footer h3 {
+  margin-top: 0;
+  color: #eee;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .layout { grid-template-columns: 1fr; height: auto; }
+  .panel  { border-right: none; border-bottom: 1px solid var(--border); }
+  .map-area { height: 400px; }
+}
+
+
+/* 🔊 Vertikale WCS-Legende im linken Panel */
+#wcsLegendContainer.vertical-legend {
+  margin-top: 1.4rem;
+  padding: 1.2rem 1.6rem;  /* mehr Innenabstand, damit Luft um den Balken */
+  background: rgba(25, 28, 35, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* zentriert innerhalb der Box */
+  justify-content: flex-start;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  width: fit-content;
+  text-align: center;
+}
+
+/* Titel über der Farbskala */
+#wcsLegendContainer .legend-title {
+  font-size: 0.9rem;
+  color: #e6e6e6;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+}
+
+/* Farbskala (Bild) */
+#wcsLegendContainer img {
+  width: 40px;            /* etwas breiter, aber harmonisch */
+  height: 200px;          /* leicht höher für Proportionen */
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: block;
+  background: #0d0f14;
+  padding: 10px;           /* schmale Luft um den Balken selbst */
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.7);
+}
+
+/* Gesamte Schrift harmonisieren */
+#wcsLegendContainer {
+  color: #fff;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+}

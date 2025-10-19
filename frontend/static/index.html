@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FYV - Soundmap</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>FYV · FindYourVenue</h1>
+    <p class="subtitle">
+      Recording and analysis of sound propagation from sound systems – based on user-generated measurement points.
+    </p>
+  </header>
+
+  <!-- Control bar -->
+  <section class="processing-bar">
+    <div class="btn-group">
+      <button id="btnProcess" class="btn main">Calculate Sound Grid</button>
+      <button id="exportGeoJSON" class="btn secondary">Export GeoJSON</button>
+      <button id="btnMeasure" class="btn secondary">Measure Distance</button>
+      <button id="toggleDelete" class="btn toggle">Delete Mode: OFF</button>
+    </div>
+    <div class="status-area">
+      <span id="procStatus" class="status">Ready</span>
+      <button id="logoutBtn" class="btn logout">Logout</button>
+      <span id="userInfo"></span>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <main class="layout">
+
+    <!-- Left sidebar -->
+    <aside class="panel">
+      <h2>Point Management</h2>
+      <p>Double-click on the map to record new measurement points.</p>
+      <p>Note: Points that are far apart require more computation time.</p>
+
+      <!-- Static point legend -->
+      <div class="legend">
+        <strong>Legend (dB):</strong>
+        <div><span class="swatch swatch-green"></span> ≤ 60 quiet</div>
+        <div><span class="swatch swatch-orange"></span> 61 – 75 moderate</div>
+        <div><span class="swatch swatch-red"></span> > 75 loud</div>
+      </div>
+
+      <!-- Dynamic WCS legend -->
+      <div id="wcsLegendContainer" class="vertical-legend">
+        <span class="legend-title">Sound Level (dB)</span>
+        <img id="wcsLegendImg" alt="Calculated WCS Legend" style="display:none;" />
+      </div>
+    </aside>
+
+    <!-- Map area -->
+    <section class="map-area">
+      <div id="map" class="map"></div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="page-footer">
+    <h3>About this map</h3>
+    <p>
+      This interactive map displays noise measurements from individual users and interpolated sound intensities.
+      The calculated sound grid is based on a distance attenuation model (α = 0.005 dB/m).
+    </p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/geotiff/dist-browser/geotiff.min.js"></script>
+  <script src="https://unpkg.com/georaster"></script>
+  <script src="https://unpkg.com/georaster-layer-for-leaflet"></script>
+  <script src="./app.js"></script>
+
+</body>
+</html>
