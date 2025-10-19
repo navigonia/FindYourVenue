@@ -32,6 +32,20 @@ html, body {
 }
 
 /* Steuerleiste */
+.info-text-container {
+  white-space: nowrap;           
+  overflow: hidden;              
+  text-overflow: ellipsis;    
+  max-width: 300px;             
+  color: var(--muted);          
+  font-size: 0.95rem;           
+  padding: 0.4rem 0.8rem;       
+  background-color: var(--panel);
+  border-radius: 6px;            
+  border: 1px solid var(--border);
+  user-select: none;             
+  font-family: 'Inter', sans-serif;
+}
 .processing-bar {
   display: flex;
   justify-content: space-between;
@@ -66,6 +80,10 @@ html, body {
 .btn:hover    { filter: brightness(1.2); transform: translateY(-1px); }
 .status       { color: var(--muted); font-size: 0.9rem; }
 
+.info-text-container {
+  display: none;
+  /* other styles as previously provided */
+}
 /* Layout mit Karte */
 .layout {
   display: grid;

@@ -1,6 +1,4 @@
-// ————————————————————————————————————————————
-// Basiskarte
-// ————————————————————————————————————————————
+
 const map = L.map("map").setView([52.52, 13.405], 12);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -8,7 +6,6 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "&copy; OpenStreetMap-Mitwirkende",
 }).addTo(map);
 
-// Layer für Punkte & Raster
 const markers = L.featureGroup().addTo(map);
 let deleteMode = false;
 let addPointMode = false;
@@ -16,9 +13,6 @@ let measureMode = false;
 let currentJob = null;
 let rasterLayer = null;
 
-// ————————————————————————————————————————————
-// GeoJSON-Export
-// ————————————————————————————————————————————
 const exportBtn = document.getElementById("exportGeoJSON");
 if (exportBtn) {
   exportBtn.addEventListener("click", () => {
@@ -37,9 +31,7 @@ if (exportBtn) {
   });
 }
 
-// ————————————————————————————————————————————
-// Farb-Utils
-// ————————————————————————————————————————————
+
 function colorForDb(db) {
   if (db <= 60) return "#2ecc71";
   if (db <= 75) return "#f39c12";
@@ -56,9 +48,7 @@ function iconForDb(db) {
   });
 }
 
-// ————————————————————————————————————————————
-// API-Operationen
-// ————————————————————————————————————————————
+
 async function fetchPoints() {
   const username = sessionStorage.getItem("username");
   if (!username) throw new Error("Kein Benutzername gefunden – bitte einloggen.");
@@ -101,9 +91,7 @@ async function deletePointFromAPI(id) {
   if (!res.ok) throw new Error("Fehler beim Löschen des Punkts");
 }
 
-// ————————————————————————————————————————————
-// Punkte auf Karte anzeigen
-// ————————————————————————————————————————————
+
 function addPoint(latlng, db, note = "", id = null) {
   const m = L.marker(latlng, { icon: iconForDb(db) });
   m.db = db;
@@ -128,9 +116,7 @@ function addPoint(latlng, db, note = "", id = null) {
   markers.addLayer(m);
 }
 
-// ————————————————————————————————————————————
-// Punkte setzen nur per Doppelklick (wenn nicht Messmodus)
-// ————————————————————————————————————————————
+
 map.on("dblclick", async (e) => {
   if (measureMode) return;
 
@@ -155,9 +141,6 @@ map.on("dblclick", async (e) => {
   }
 });
 
-// ————————————————————————————————————————————
-// Löschmodus
-// ————————————————————————————————————————————
 const toggleBtn = document.getElementById("toggleDelete");
 if (toggleBtn) {
   toggleBtn.addEventListener("click", () => {
@@ -166,9 +149,7 @@ if (toggleBtn) {
     toggleBtn.classList.toggle("active", deleteMode);
   });
 }
-// ————————————————————————————————————————————
-// Entfernungsmessung (einmalige Strecke ohne Punktanzeige)
-// ————————————————————————————————————————————
+
 let measureStart = null;
 let measureTempLine = null;
 let measureLine = null;
@@ -195,23 +176,23 @@ function resetMeasurement() {
   map.closePopup();
 }
 
-// Klick auf Karte: Start- oder Endpunkt setzen
+
 map.on("click", (e) => {
   if (!measureMode) return;
 
   if (!isMeasuring) {
-    // Startpunkt setzen und vorbereiten
+    
     isMeasuring = true;
     measureStart = e.latlng;
 
-    // Temporäre Linie vorbereiten (dynamisch)
+    
     measureTempLine = L.polyline([measureStart, measureStart], {
       color: "#81c784",
       weight: 3,
       dashArray: "6,4",
     }).addTo(map);
   } else {
-    // Endpunkt setzen – finale Messlinie zeichnen
+
     const measureEnd = e.latlng;
     if (measureTempLine) map.removeLayer(measureTempLine);
     if (measureLine) map.removeLayer(measureLine);
@@ -221,12 +202,12 @@ map.on("click", (e) => {
       weight: 3,
     }).addTo(map);
 
-    // Entfernung berechnen
+  
     const distance = measureStart.distanceTo(measureEnd);
     const unit = distance >= 1000 ? "km" : "m";
     const value = distance >= 1000 ? (distance / 1000).toFixed(2) : distance.toFixed(1);
 
-    // Popup am Endpunkt anzeigen
+
     L.popup({ closeButton: false, offset: L.point(0, -10) })
       .setLatLng(measureEnd)
       .setContent(`<b>${value} ${unit}</b>`)
@@ -236,22 +217,20 @@ map.on("click", (e) => {
   }
 });
 
-// Dynamische Linienvorschau bei Mausbewegung
+
 map.on("mousemove", (e) => {
   if (measureMode && isMeasuring && measureTempLine) {
     measureTempLine.setLatLngs([measureStart, e.latlng]);
   }
 });
 
-// Rechtsklick = Messung abbrechen
+
 map.on("contextmenu", () => {
   if (measureMode) resetMeasurement();
 });
 
 
-// ————————————————————————————————————————————
-// Processing-Button
-// ————————————————————————————————————————————
+
 const processBtn = document.getElementById("btnProcess");
 
 if (processBtn) {
@@ -320,9 +299,7 @@ async function pollJobStatus(job_id) {
   }, 1500);
 }
 
-// ————————————————————————————————————————————
-// Dynamische Legende
-// ————————————————————————————————————————————
+
 function createLegendGradient(min, max) {
   const legendContainer = document.getElementById("wcsLegendContainer");
   const legendImg = document.getElementById("wcsLegendImg");
@@ -373,9 +350,7 @@ function createLegendGradient(min, max) {
   legendContainer.style.display = "flex";
 }
 
-// ————————————————————————————————————————————
-// WCS-Layer laden
-// ————————————————————————————————————————————
+
 async function addWcsLayer(layerName) {
   if (rasterLayer) map.removeLayer(rasterLayer);
 
@@ -430,9 +405,8 @@ async function addWcsLayer(layerName) {
   }
 })();
 
-// ————————————————————————————————————————————
-// Logout
-// ————————————————————————————————————————————
+
+
 const logoutBtn = document.getElementById("logoutBtn");
 if (logoutBtn) {
   logoutBtn.addEventListener("click", () => {
@@ -445,5 +419,19 @@ if (logoutBtn) {
 const userInfo = document.getElementById("userInfo");
 if (userInfo) {
   const username = sessionStorage.getItem("username") || "Gast";
-  userInfo.textContent = `Angemeldet als: ${username}`;
+  userInfo.textContent = `Hello ${username}`;
+}
+
+const infoTextContainer = document.querySelector(".info-text-container");
+
+if (userInfo && infoTextContainer) {
+  const username = sessionStorage.getItem("username") || "Gast";
+  userInfo.textContent = `Hello ${username}`;
+
+  // Show infotext only if user is guest "Gast"
+  if (username === "Gast") {
+    infoTextContainer.style.display = "block";
+  } else {
+    infoTextContainer.style.display = "none";
+  }
 }

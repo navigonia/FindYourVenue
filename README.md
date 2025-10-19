@@ -55,6 +55,7 @@ docker-compose down
 
 ## Notes
 
+- You might use the admin login credentials with Usernam: distgis Password: distgis
 - Database and raster data are stored in Docker volumes to ensure data persistence across container restarts.
 - Environment variables in the `docker-compose.yml` file can be modified if necessary.
 
