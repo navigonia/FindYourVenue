@@ -137,7 +137,7 @@ map.on("dblclick", async (e) => {
     const saved = await savePointToAPI(lat, lon, db, note);
     addPoint([saved.lat, saved.lon], saved.db_value, saved.note, saved.id);
   } catch (err) {
-    alert("Fehler beim Speichern: " + err.message);
+    alert("Error on saving: " + err.message);
   }
 });
 
@@ -145,7 +145,7 @@ const toggleBtn = document.getElementById("toggleDelete");
 if (toggleBtn) {
   toggleBtn.addEventListener("click", () => {
     deleteMode = !deleteMode;
-    toggleBtn.textContent = `Löschmodus: ${deleteMode ? "AN" : "AUS"}`;
+    toggleBtn.textContent = `Deletemode: ${deleteMode ? "ON" : "OFF"}`;
     toggleBtn.classList.toggle("active", deleteMode);
   });
 }
@@ -161,7 +161,7 @@ if (measureBtn) {
   measureBtn.addEventListener("click", () => {
     measureMode = !measureMode;
     measureBtn.classList.toggle("active", measureMode);
-    measureBtn.textContent = measureMode ? "Messmodus: AN" : "Entfernung messen";
+    measureBtn.textContent = measureMode ? "measurement mode: on" : "measure distance";
     if (!measureMode) resetMeasurement();
   });
 }
@@ -243,7 +243,7 @@ if (processBtn) {
     }
 
     processBtn.disabled = true;
-    processBtn.textContent = "Berechnung läuft...";
+    processBtn.textContent = "Calculation running...";
 
     try {
       const resp = await fetch("/api/process/sound-raster", {
@@ -266,7 +266,7 @@ if (processBtn) {
     } catch (err) {
       alert("Fehler beim Starten: " + err.message);
       processBtn.disabled = false;
-      processBtn.textContent = "Sound-Raster berechnen";
+      processBtn.textContent = "calculate sound raster";
     }
   });
 }
@@ -280,7 +280,7 @@ async function pollJobStatus(job_id) {
       if (data.status === "done") {
         clearInterval(interval);
         processBtn.disabled = false;
-        processBtn.textContent = "Sound-Raster berechnen";
+        processBtn.textContent = "calculate sound raster";
         addWcsLayer(data.layer_name);
       } else if (data.status === "error" || data.status === "unknown") {
         clearInterval(interval);
@@ -435,3 +435,4 @@ if (userInfo && infoTextContainer) {
     infoTextContainer.style.display = "none";
   }
 }
+
